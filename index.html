@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IATC Inc. | International Accounting & Tax Consultants</title>
+  <meta name="description" content="Cloud-based accounting, tax, payroll, bookkeeping, crypto accounting, audit defense & business setup services for individuals and businesses worldwide."/>
+  
+  <style>
+    :root {
+      --primary: #2c5282;      /* deep blue */
+      --primary-dark: #1a365d;
+      --accent: #48bb78;        /* green for trust/growth */
+      --light: #f7fafc;
+      --gray: #4a5568;
+      --dark: #1a202c;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      color: var(--dark);
+      background-color: var(--light);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* ================== HEADER / HERO ================== */
+    header {
+      position: relative;
+      height: 100vh;
+      min-height: 700px;
+      color: white;
+      background: linear-gradient(rgba(26, 54, 93, 0.75), rgba(26, 54, 93, 0.85)),
+                  url('hero-background.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      position: absolute;
+      top: 2.5rem;
+      left: 5%;
+      width: 180px;
+      height: auto;
+      /* Replace with your logo file name */
+      /* background: url('iatc-logo.png') center/contain no-repeat; */
+    }
+
+    .logo img {
+      width: 100%;
+      height: auto;
+    }
+
+    .hero-content {
+      max-width: 700px;
+      padding-left: 5%;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(2.8rem, 6vw, 4.5rem);
+      margin-bottom: 1.2rem;
+      line-height: 1.1;
+    }
+
+    .hero-content p {
+      font-size: 1.35rem;
+      margin-bottom: 2.5rem;
+      opacity: 0.95;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 1rem 2.2rem;
+      background-color: var(--accent);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      font-size: 1.1rem;
+    }
+
+    .btn:hover {
+      background-color: #38a169;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(72,187,120,0.35);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid white;
+      margin-left: 1.5rem;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: var(--primary-dark);
+    }
+
+    /* ================== SECTIONS ================== */
+    section {
+      padding: 8rem 0;
+    }
+
+    h2 {
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 3.5rem;
+      color: var(--primary);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    }
+
+    .card-content {
+      padding: 2.2rem;
+    }
+
+    .card h3 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      font-size: 1.6rem;
+    }
+
+    /* ================== CONTACT ================== */
+    .contact {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+    }
+
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background: var(--dark);
+      color: #cbd5e0;
+      text-align: center;
+      padding: 3rem 0;
+      font-size: 0.95rem;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .hero-content {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        text-align: center;
+      }
+
+      .btn, .btn-outline {
+        display: block;
+        margin: 1rem auto;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <!-- Place your logo file named iatc-logo.png (or change name) in the same folder -->
+    <div class="logo">
+      <img src="iatc-logo.png" alt="IATC Inc. Logo">
+    </div>
+
+    <div class="hero-content">
+      <h1>Modern Cloud Accounting<br>That Helps You Soar</h1>
+      <p>Global tax, bookkeeping, payroll, crypto accounting, audit defense & new business setup — all handled remotely, securely, and personally.</p>
+      
+      <a href="#contact" class="btn">Get Started Today</a>
+      <a href="#services" class="btn btn-outline">See Our Services</a>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section id="services">
+      <h2>Our Services</h2>
+      
+      <div class="services-grid">
+        <div class="card">
+          <div class="card-content">
+            <h3>Individual & Business Taxes</h3>
+            <p>Expert preparation, planning, and consultation for complex tax situations — including crypto & digital assets.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <h3>Bookkeeping & Accounting</h3>
+            <p>Accurate, real-time cloud bookkeeping tailored for remote businesses, startups, and virtual operations.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <h3>Payroll Services</h3>
+            <p>Compliant, hassle-free payroll processing for US and international teams — fully remote.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <h3>New Business Setup</h3>
+            <p>From business plan & entity selection to tax strategy, EIN, accounting systems & more.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <h3>Audit Defense & IRS Resolution</h3>
+            <p>Professional representation during audits — often without your direct involvement.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <h3>Cryptocurrency Accounting</h3>
+            <p>Specialized tracking, reporting, and tax preparation for digital assets and blockchain transactions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Ready to Work Together?</h2>
+        <p style="font-size: 1.4rem; margin: 2rem 0;">
+          For all <strong>Corporate, Billing & Tax inquiries</strong>, please contact us at:<br>
+          <a href="mailto:billing@iatcinc.com">billing@iatcinc.com</a>
+        </p>
+        <p>We provide 100% virtual consultations — secure, convenient, and global.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 IATC Inc. — International Accounting & Tax Consultants<br>
+    Sheridan, Wyoming | Fully Cloud-Based • Serving Clients Worldwide</p>
+  </footer>
+
+</body>
+</html>
