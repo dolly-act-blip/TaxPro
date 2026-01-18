@@ -8,9 +8,9 @@
   
   <style>
     :root {
-      --primary: #2c5282;      /* deep blue */
+      --primary: #2c5282;
       --primary-dark: #1a365d;
-      --accent: #48bb78;        /* green for trust/growth */
+      --accent: #48bb78;
       --light: #f7fafc;
       --gray: #4a5568;
       --dark: #1a202c;
@@ -47,30 +47,33 @@
       align-items: center;
     }
 
-    .logo {
-      position: absolute;
-      top: 2.5rem;
-      left: 5%;
-      width: 180px;
-      height: auto;
-      /* Replace with your logo file name */
-      /* background: url('iatc-logo.png') center/contain no-repeat; */
-    }
-
-    .logo img {
-      width: 100%;
-      height: auto;
-    }
-
     .hero-content {
-      max-width: 700px;
+      position: relative;
+      z-index: 2;
+      max-width: 780px;
       padding-left: 5%;
+      padding-right: 5%;
+    }
+
+    /* Logo sits behind the text, centered relative to hero-content */
+    .hero-logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 380px;               /* ← change this value to make logo bigger/smaller */
+      max-width: 85%;
+      height: auto;
+      opacity: 0.12;              /* subtle — try 0.08 to 0.18 depending on your logo */
+      pointer-events: none;
+      z-index: 1;
     }
 
     .hero-content h1 {
-      font-size: clamp(2.8rem, 6vw, 4.5rem);
+      font-size: clamp(2.8rem, 6vw, 4.8rem);
       margin-bottom: 1.2rem;
       line-height: 1.1;
+      position: relative;
     }
 
     .hero-content p {
@@ -177,9 +180,13 @@
     /* Responsive adjustments */
     @media (max-width: 768px) {
       .hero-content {
+        text-align: center;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
-        text-align: center;
+      }
+
+      .hero-logo {
+        width: 300px;   /* smaller on mobile */
       }
 
       .btn, .btn-outline {
@@ -193,12 +200,10 @@
 <body>
 
   <header>
-    <!-- Place your logo file named iatc-logo.png (or change name) in the same folder -->
-    <div class="logo">
-      <img src="iatc-logo.png" alt="IATC Inc. Logo">
-    </div>
-
     <div class="hero-content">
+      <!-- Logo centered behind the headline -->
+      <img src="iatc-logo.png" alt="IATC Inc. Logo" class="hero-logo">
+
       <h1>Modern Cloud Accounting<br>That Helps You Soar</h1>
       <p>Global tax, bookkeeping, payroll, crypto accounting, audit defense & new business setup — all handled remotely, securely, and personally.</p>
       
@@ -207,53 +212,18 @@
     </div>
   </header>
 
+  <!-- rest of the page remains unchanged -->
   <main class="container">
-
     <section id="services">
       <h2>Our Services</h2>
-      
       <div class="services-grid">
-        <div class="card">
-          <div class="card-content">
-            <h3>Individual & Business Taxes</h3>
-            <p>Expert preparation, planning, and consultation for complex tax situations — including crypto & digital assets.</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-content">
-            <h3>Bookkeeping & Accounting</h3>
-            <p>Accurate, real-time cloud bookkeeping tailored for remote businesses, startups, and virtual operations.</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-content">
-            <h3>Payroll Services</h3>
-            <p>Compliant, hassle-free payroll processing for US and international teams — fully remote.</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-content">
-            <h3>New Business Setup</h3>
-            <p>From business plan & entity selection to tax strategy, EIN, accounting systems & more.</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-content">
-            <h3>Audit Defense & IRS Resolution</h3>
-            <p>Professional representation during audits — often without your direct involvement.</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-content">
-            <h3>Cryptocurrency Accounting</h3>
-            <p>Specialized tracking, reporting, and tax preparation for digital assets and blockchain transactions.</p>
-          </div>
-        </div>
+        <!-- ... cards ... -->
+        <div class="card"><div class="card-content"><h3>Individual & Business Taxes</h3><p>Expert preparation, planning, and consultation for complex tax situations — including crypto & digital assets.</p></div></div>
+        <div class="card"><div class="card-content"><h3>Bookkeeping & Accounting</h3><p>Accurate, real-time cloud bookkeeping tailored for remote businesses, startups, and virtual operations.</p></div></div>
+        <div class="card"><div class="card-content"><h3>Payroll Services</h3><p>Compliant, hassle-free payroll processing for US and international teams — fully remote.</p></div></div>
+        <div class="card"><div class="card-content"><h3>New Business Setup</h3><p>From business plan & entity selection to tax strategy, EIN, accounting systems & more.</p></div></div>
+        <div class="card"><div class="card-content"><h3>Audit Defense & IRS Resolution</h3><p>Professional representation during audits — often without your direct involvement.</p></div></div>
+        <div class="card"><div class="card-content"><h3>Cryptocurrency Accounting</h3><p>Specialized tracking, reporting, and tax preparation for digital assets and blockchain transactions.</p></div></div>
       </div>
     </section>
 
@@ -267,11 +237,10 @@
         <p>We provide 100% virtual consultations — secure, convenient, and global.</p>
       </div>
     </section>
-
   </main>
 
   <footer>
-    <p>&copy; 2026 IATC Inc. — International Accounting & Tax Consultants<br>
+    <p>© 2026 IATC Inc. — International Accounting & Tax Consultants<br>
     Sheridan, Wyoming | Fully Cloud-Based • Serving Clients Worldwide</p>
   </footer>
 
